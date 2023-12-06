@@ -1,0 +1,38 @@
+h2{
+    padding: 50px 60px;
+    color: aliceblue;
+    text-align: center;
+}
+.esqc{
+    background-color: burlywood;
+    border-style: solid;
+
+}
+.dirc{
+    background-color: crimson;
+    border-style: solid;
+}
+.esqb{
+    background-color:mediumspringgreen;
+    border-style: solid;
+    
+}
+.dirb{
+    background-color:cornflowerblue;
+    border-style: solid;
+
+}
+.container{
+    height: 100%;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:410px 0px;
+}
+.linha1, .linha2{
+    display: flex;
+    width: 152%;
+    justify-content: space-between;
+    align-items: space-around;
+}

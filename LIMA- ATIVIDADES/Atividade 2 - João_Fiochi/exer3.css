@@ -1,0 +1,32 @@
+.esqc{
+    background-color: burlywood;
+    border-style: solid;
+    position: absolute;
+    padding: 10px 10px;
+    width: 50px;
+}
+.dirc{
+    background-color: crimson;
+    border-style: solid;
+    position: absolute;
+    padding: 10px 10px;
+    margin-left: 94%;
+    width: 50px;
+}
+.esqb{
+    background-color:mediumspringgreen;
+    border-style: solid;
+    position: absolute;
+    padding: 10px 10px;
+    margin-top: 42%;
+    width: 50px;
+}
+.dirb{
+    background-color:cornflowerblue;
+    border-style: solid;
+    position: absolute;
+    padding: 10px 10px;
+    margin-top: 42%;
+    margin-left: 94%;
+    width: 50px;
+}

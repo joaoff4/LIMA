@@ -1,0 +1,141 @@
+body{
+    background-size: 150%;
+    background-image:url(../img/fundobody.png)
+}
+button{
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    border-style: solid;
+}
+b{
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+}
+u{  
+    margin-top: 155px;
+    margin-left: -75px;
+    font-size: 19px;
+}
+button:hover{
+    width: 90px;
+    height: 60px;
+}
+.hr{
+    height: 5px;
+    border-color: black;
+    background-color:black ;
+    border-style: solid;
+}
+.logo{
+    width: 85px;
+    height: 85px;
+}  
+.logo:hover{
+    width: 90px;
+    height: 90px;
+}    
+.ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0D53AF;
+    border-bottom: 5px;
+    border-top: 0px;
+    border-style: solid;
+    height: 85px;
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    gap: 195px;
+}
+.cabecalho{
+    margin-top: 15px;
+    width: 85px;
+    height: 55px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.principal{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 25px;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.assinatura{
+    background-color: #d9d9d9;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 21px;
+    width: 250px;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#descricao{
+    font-size: 15px;
+}
+#descricao2{
+    font-size: 13px;
+}
+#descricao3{
+    font-size: 17px;
+}
+.ass{
+    color: aliceblue;
+    width: 75px;
+    height: 45px;
+    margin-top: 5px;
+}
+.ass:hover{
+    height: 48px;
+    width: 80px;
+}
+#basq{
+    background-color: orangered;
+}
+#assf{
+    background-color: black;
+    
+}
+#assfe{
+    background-color: darkmagenta;
+}
+#asscl{
+    background-color: darkblue;
+}
+#assfb{
+    background-color: darkred;
+}
+#asslib{
+    background-color:crimson;
+}
+#assfta{
+    background-color: chocolate;
+}
+#assftb{
+    margin-top: -1px;
+    background-color:darkkhaki;
+}
+#nfl{
+    background-color: cadetblue;
+}
+#vol{
+    background-color: dodgerblue;
+}
+#mas{
+    margin-top: 10px;
+    background-color: goldenrod;
+}
+.hr{
+    margin-top: 20px;
+    height: 5px;
+    border-color: black;
+    background-color:black ;
+    border-style: solid;
+}

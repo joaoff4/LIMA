@@ -1,0 +1,15 @@
+body{
+    background-color: peru;
+}
+h1.border{
+    border-style:solid;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+h3.text{
+    border-style: solid;
+    position: absolute;
+    margin-right: 20px;
+    margin-left: 10px;
+    padding: 100px 100px 100px 100px;
+}

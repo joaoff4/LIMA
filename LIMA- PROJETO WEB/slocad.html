@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slocad.css">
+    <title>SLO- Sports Live Online- Cadastro</title>
+</head>
+<body>
+    <ul class="ul">
+        <li><a href="slo.html"><img class="logo" src="img/SLO2-logo.png"></a></li>
+        <li><a href="slolog.html"><button id="button" class="cabecalho">Entrar</button></a></li>
+        <li><a href="sloass.html"><button id="button" class="cabecalho">Assinaturas</button></a></li>
+        <li><a href="slosbr.html"><button id="button" class="cabecalho">Sobre</button></a></li>
+        <li><a href="sloctt.html"><button id="button" class="cabecalho">Contato</button></a></li>
+    </ul>
+    <div id="center">
+        <div class="login">
+            <h2 id="h2l">Login</h2>
+                <form class="email">
+                    Nome Completo <br>
+                    <input type="text">
+                </form> <br> <br>
+                <form class="email">
+                    E-mail ou Nº de Telefone
+                    <input type="text">
+                </form>
+                <form class="senha">
+                    Defina Uma Senha <br>
+                    <input type="password">
+                </form>
+                Confira sua localização e tire uma foto de seu rosto para concluir o cadastro! <br>
+                🔽
+        </div>
+
+        <h1><u>Mapa</u></h1>
+        <p><b>Latitude: </b><span id="latitude"></span></p>
+        <p><b>Longitude: </b><span id="longitude"></span></p>
+        <div id="map"></div>
+        <button onclick="getLocation()">Verificar Localização</button>
+
+        <video id="videoElement" width="400" height="300" autoplay></video>
+        <div id="buttons">
+            <button onclick="startCamera()">Abrir câmera</button>
+            <button onclick="stopCamera()"> Fechar câmera</button>
+            <button onclick="foto()"> Tirar foto</button>
+        </div>
+
+    </div> 
+    
+    <hr class="hr">
+    <b>CONTATOS- Telefone:+55 19 2298-2004 | e-mail:slo@gmail.com | Instagram: @slostreaming</b>
+
+    <script>
+        //câmera
+        let videoStream;
+        async function startCamera(){
+            const videoElement = document.getElementById('videoElement');
+            try{
+                videoStream = await navigator.mediaDevices.getUserMedia({video : true});
+                videoElement.srcObject = videoStream;
+            }catch(error){
+                console.error('Erro ao abrir a câmera', erro);
+                alert('Erro ao abrir a câmera')
+            }
+        }
+ 
+        async function stopCamera(){
+            const videoElement = document.getElementById('videoElement');
+            if(videoStream){
+                const tracks = videoStream.getTracks();
+                tracks.forEach(track => track.stop());
+                    videoElement.srcObject = null;
+                };
+            }
+
+        function foto(){
+            alert('Sua foto foi tirada e será enviada para a análise da criação da sua conta 😀');
+        }
+        //localização
+        let map;
+        function initMap(latitude, longitude) {
+        if (!isNaN(parseFloat(latitude)) && !isNaN(parseFloat(longitude))) {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+            zoom: 12
+            });
+
+            new google.maps.Marker({
+            position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+            map: map,
+            title: 'Sua Localização'
+            });
+        } else {
+            alert('Coordenadas inválidas.');
+        }
+        }
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert('Geolocalização não é suportada por este navegador.');
+      }
+    }
+
+    function showPosition(position) {
+      const latitudeElement = document.getElementById('latitude');
+      const longitudeElement = document.getElementById('longitude');
+
+      latitudeElement.innerText = position.coords.latitude;
+      longitudeElement.innerText = position.coords.longitude;
+
+      initMap(position.coords.latitude, position.coords.longitude);
+    }
+
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          alert('Permissão para geolocalização foi negada pelo usuário.');
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert('Informações de localização indisponíveis.');
+          break;
+        case error.TIMEOUT:
+          alert('Tempo limite esgotado ao tentar obter a localização.');
+          break;
+        case error.UNKNOWN_ERROR:
+          alert('Ocorreu um erro desconhecido ao tentar obter a localização.');
+          break;
+      }
+    }
+    </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAolKWP6pUDSVEZUCg6uYC5P7ASWFSU4T8&callback=initMap"></script>
+</body>
+</html>

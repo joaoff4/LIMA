@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.btn{
+    background-color: burlywood;
+    border-style: solid;
+    border-radius: 50px;
+    position: absolute;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color:wheat;
+}
+.btn2{
+    background-color:goldenrod;
+    border-style: solid;
+    border-radius: 50px;
+    position: absolute;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn2:hover{
+    background-color:gold;
+}

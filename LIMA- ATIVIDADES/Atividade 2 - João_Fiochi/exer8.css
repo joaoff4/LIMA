@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    text-align: center;
+    border: solid 2px black;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+h2.form{
+    text-align: left;
+}
+.botao{
+    background-color: darkcyan;
+    color: whitesmoke;
+    height: 30px;
+}
+.botao:hover{
+    background-color: cyan;
+    color: black;
+}
+.botao2{
+    background-color: darkred;
+    color: aliceblue;
+    height: 30px;
+}
+.botao2:hover{
+    background-color: red;
+    color: whitesmoke;
+}

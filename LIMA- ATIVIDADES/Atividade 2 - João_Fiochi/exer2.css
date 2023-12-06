@@ -1,0 +1,19 @@
+body{
+    border-style: solid;
+    padding-bottom: 26%;
+    background-color:antiquewhite;
+}
+h1.title{
+    text-align: center;
+}
+h2.text{
+    border-style: double;
+    position: absolute;
+    margin-left: 880px;
+    margin-right: 300px;
+    padding: 10px 10px 10px 10px;
+}
+.img {
+    margin-top: 45px;
+    margin-left: 300px;
+}
